@@ -1,4 +1,4 @@
-package com.ajieno.bansostracking.ui.databansos
+package com.ajieno.bansostracking.ui.requestbansos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
