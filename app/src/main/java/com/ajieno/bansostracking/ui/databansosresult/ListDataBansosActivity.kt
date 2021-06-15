@@ -1,4 +1,4 @@
-package com.ajieno.bansostracking.ui.requestbansos
+package com.ajieno.bansostracking.ui.databansosresult
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ajieno.bansostracking.R
 import com.ajieno.bansostracking.RetrofitClient
 import com.ajieno.bansostracking.api.response.DataBansosResponse
+import com.ajieno.bansostracking.ui.dasabansosinput.EditDataBansosActivity
 import kotlinx.android.synthetic.main.activity_list_data_bansos.*
 import retrofit2.Call
 import retrofit2.Callback

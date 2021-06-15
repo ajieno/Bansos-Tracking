@@ -28,8 +28,8 @@ data class DataBansosResponse(
         @field:SerializedName("penghasilan")
         val penghasilan: String? = null,
 
-        @field:SerializedName("jtanggungjawab")
-        val jtanggungjawab: String? = null,
+        @field:SerializedName("jmltj")
+        val jmltj: String? = null,
 
         @field:SerializedName("umur")
         val umur: String? = null,
@@ -37,17 +37,17 @@ data class DataBansosResponse(
         @field:SerializedName("ibuhamil")
         val ibuhamil: String? = null,
 
-        @field:SerializedName("lanjutusia")
-        val lanjutusia: String? = null,
+        @field:SerializedName("lansia")
+        val lansia: String? = null,
 
-        @field:SerializedName("disabilitas")
-        val disabilitas: String? = null,
+        @field:SerializedName("disable")
+        val disable: String? = null,
 
-        @field:SerializedName("jmotor")
-        val jmotor: String? = null,
+        @field:SerializedName("jmlmtr")
+        val jmlmtr: String? = null,
 
-        @field:SerializedName("jmobil")
-        val jmobil: String? = null,
+        @field:SerializedName("jmlmob")
+        val jmlmob: String? = null,
 
         @field:SerializedName("bpnt")
         val bpnt: String? = null,

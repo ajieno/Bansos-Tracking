@@ -1,4 +1,4 @@
-package com.ajieno.bansostracking.ui.requestbansos
+package com.ajieno.bansostracking.ui.dasabansosinput
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import com.ajieno.bansostracking.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.item_bansos.view.*
 import kotlin.collections.ArrayList
 
-class ListDataBansosAdapter (private val list: ArrayList<DataBansosResponse>): RecyclerView.Adapter<ListDataBansosAdapter.LaporanViewHolder>(){
+class ListBansosInputAdapter (private val list: ArrayList<DataBansosResponse>): RecyclerView.Adapter<ListBansosInputAdapter.LaporanViewHolder>(){
     inner class LaporanViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
         lateinit var id_databansos: String
         lateinit var nama: String
@@ -19,7 +19,7 @@ class ListDataBansosAdapter (private val list: ArrayList<DataBansosResponse>): R
         fun bind(postResponse: DataBansosResponse){
             with(itemView){
 
-                id_txt.text = "${postResponse.nik}"
+                nik_txt.text = "${postResponse.nik}"
                 nama_txt.text = "${postResponse.nama}"
 
                 id_databansos = "${postResponse.nik}"
@@ -29,7 +29,7 @@ class ListDataBansosAdapter (private val list: ArrayList<DataBansosResponse>): R
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LaporanViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_bansos, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_bansos_input, parent, false)
         return LaporanViewHolder(view)
     }
 
@@ -45,4 +45,6 @@ class ListDataBansosAdapter (private val list: ArrayList<DataBansosResponse>): R
 
 
     override fun getItemCount(): Int = list.size
+
+
 }

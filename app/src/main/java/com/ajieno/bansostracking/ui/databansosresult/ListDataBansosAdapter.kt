@@ -1,4 +1,4 @@
-package com.ajieno.bansostracking.ui.hasilbansos
+package com.ajieno.bansostracking.ui.databansosresult
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,16 +11,16 @@ import com.ajieno.bansostracking.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.item_bansos.view.*
 import kotlin.collections.ArrayList
 
-class ListHasilBansosAdapter (private val list: ArrayList<DataBansosResponse>): RecyclerView.Adapter<ListHasilBansosAdapter.LaporanViewHolder>(){
+class ListDataBansosAdapter (private val list: ArrayList<DataBansosResponse>): RecyclerView.Adapter<ListDataBansosAdapter.LaporanViewHolder>(){
     inner class LaporanViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
         lateinit var id_databansos: String
-        lateinit var nama: String
 
         fun bind(postResponse: DataBansosResponse){
             with(itemView){
 
-                id_txt.text = "${postResponse.nik}"
+                nik_txt.text = "${postResponse.nik}"
                 nama_txt.text = "${postResponse.nama}"
+                layak_txt.text = "${postResponse.penerima}"
 
                 id_databansos = "${postResponse.nik}"
 
@@ -45,4 +45,6 @@ class ListHasilBansosAdapter (private val list: ArrayList<DataBansosResponse>): 
 
 
     override fun getItemCount(): Int = list.size
+
+
 }
